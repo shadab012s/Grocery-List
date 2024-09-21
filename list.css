@@ -1,0 +1,141 @@
+:root {
+  --background-color: #f8f8f8;
+  --primary-color: #3498db;
+  --secondary-color: #3aa347;
+  --tertiary-color: #4183D7;
+  --font-size-large: 3rem;
+  --font-size-medium: 2.5rem;
+  --font-size-small: 1.4rem;
+  --list-border-color: #dedede;
+  --list-item-border-color: #ccc;
+  --list-item-hover-bg-color: #e0e0e0;
+  --list-item-hover-color: #2c7abb;
+}
+
+body {
+  background-image: url('image/flat-lay-vegetables-frame.jpg');
+  background-size: cover; /* Ensures the background image covers the entire area */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: courier, monospace;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+form {
+  color: var(--primary-color);
+  font-size: var(--font-size-small);
+}
+
+input[type="text"] {
+  background-color: var(--background-color);
+  width: calc(100% - 200px);
+  box-sizing: border-box;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+input[type="number"] {
+  width: 50px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+#addNeed, #addHave {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+h1 {
+  color: var(--secondary-color);
+  font-size: var(--font-size-large);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+h2 {
+  color: var(--tertiary-color);
+  font-size: var(--font-size-medium);
+  letter-spacing: -2px;
+  text-align: left;
+}
+
+.list {
+  color: #555;
+  font-size: var(--font-size-small);
+  padding: 0 !important;
+  width: 100%;
+  border: 1px solid var(--list-border-color);
+  margin: 0 auto 20px;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  border-bottom: 1px dotted var(--list-item-border-color);
+  padding: 10px;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.list li:hover {
+  background-color: var(--list-item-hover-bg-color);
+  color: var(--list-item-hover-color);
+}
+
+.list li .item-name {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.list li .quantity-input {
+  width: 50px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.list li a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: red;
+  font-size: 1.2rem;
+}
+
+li a {
+  float: right;
+  text-decoration: none;
+  color: red;
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 160px);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .list {
+    width: 100%;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="grocerylist.js"></script>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <h1 style="background-color: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 8px; display: inline-block; color: #3aa347; font-size: 3rem;">Grocery List</h1>
+    <form id="addItemForm" action="add" method="get">
+        <label for="item">Add Item:</label>
+        <input type="text" id="item" name="item" placeholder="Item Name">
+        <input type="number" id="quantity" name="quantity" placeholder="Quantity" min="1" value="1">
+        <input id="addNeed" type="submit" value="Need">
+        <input id="addHave" type="submit" value="Have">
+    </form>
+    <h2>Need (<span id="need-count">4</span>):</h2>
+    <ul class="list" id="need-list">
+        <li>
+            <input type="checkbox" name="item">
+            <span class="item-name">Bread</span>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <a href="#">&#10006;</a>
+        </li>
+        <li>
+            <input type="checkbox" name="item">
+            <span class="item-name">Eggs</span>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <a href="#">&#10006;</a>
+        </li>
+        <li>
+            <input type="checkbox" name="item">
+            <span class="item-name">Milk</span>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <a href="#">&#10006;</a>
+        </li>
+        <li>
+            <input type="checkbox" name="item">
+            <span class="item-name">Butter</span>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <a href="#">&#10006;</a>
+        </li>
+    </ul>
+    <h2>Have (<span id="have-count">4</span>):</h2>
+    <ul class="list" id="have-list">
+        <li>
+            <input type="checkbox" name="item" checked>
+            <span class="item-name">Banana</span>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <a href="#">&#10006;</a>
+        </li>
+        <li>
+            <input type="checkbox" name="item" checked>
+            <span class="item-name">Onion</span>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <a href="#">&#10006;</a>
+        </li>
+        <li>
+            <input type="checkbox" name="item" checked>
+            <span class="item-name">Ginger</span>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <a href="#">&#10006;</a>
+        </li>
+        <li>
+            <input type="checkbox" name="item" checked>
+            <span class="item-name">Apples</span>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <a href="#">&#10006;</a>
+        </li>
+    </ul>
+</body>
+<script src="grocerylist.js"></script>
+</html>
